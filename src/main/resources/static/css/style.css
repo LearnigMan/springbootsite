@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.error-input{
+	border-color: red;
+	margin-left: 5px;
+}
+
+.error-messages{
+	color: #b94a48;
+}
+
+.alert-color{
+	background-color: #dd4b39;
+}
+
+.alert-box{
+	color: #ffffff;
+	background-color: #BF0404;
+}
+.alert-box p{
+    font-size:14px;
+}

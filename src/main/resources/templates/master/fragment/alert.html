@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!-- thymeleafと拡張機能を使用するおまじない -->
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<th:block th:fragment="error_message" th:if="${#fields.hasErrors('all')}">
+	<div class="box-body">
+	<div class="alert alert-box">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<p><i class="icon fa fa-ban"></i>エラーが発生しました。内容をご確認ください。</p>
+    </div>
+    </div>
+	</th:block>
+</body>
+</html>

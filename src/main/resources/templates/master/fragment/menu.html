@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!-- thymeleafと拡張機能を使用するおまじない -->
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<th:block th:fragment="common_menu">
+		<header class="main-header">
+			<!-- ロゴ -->
+			<a href="" class="logo">システム管理</a>
+			<!-- トップメニュー -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- メニュー項目 -->
+				<!-- 小さくなった時に消す -->
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<!-- サイドバー制御 -->
+					<a href="" class="sidebar-toggle" data-toggle="offcanvas"
+						role="button"> <span class="sr-only">Toggle navigation</span>
+					</a>
+					<!-- 右に寄せるメニュ :navbar-rightとかもあるが、マージが無い -->
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li>
+								<form th:action="@{/logout}" method="post">
+									<i class="fa fa-sign-out"></i><input type="submit"
+										value="ログアウト" />
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- end header -->
+	</th:block>
+	<th:block th:fragment="side_menu">
+		<!-- サイドバー -->
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<ul class="sidebar-menu" data-widget="tree">
+					<!-- メニューヘッダ -->
+					<li class="header">機能一覧</li>
+					<!-- メニュー項目 -->
+					<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
+							<span>顧客管理</span> <span class="pull-right-container"><i
+								class="fa fa-angle-left pull-right"></i> </span>
+					</a>
+						<ul class="treeview-menu">
+							<li><a href="/customers/create" th:href="@{/customers/create}">
+							  <i class="fa fa-circle-o"></i> 顧客登録</a>
+							</li>
+							<li><a href="/customers/" th:href="@{/customers/}">
+							  <i class="fa fa-circle-o"></i> 顧客登一覧</a>
+							</li>
+						</ul></li>
+					<li class="treeview"><a href="#"> <i class="fa fa-folder"></i>
+							<span>Examples</span> <span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<li><a href="pages/examples/invoice.html"><i
+									class="fa fa-circle-o"></i> Invoice</a></li>
+							<li><a href="pages/examples/profile.html"><i
+									class="fa fa-circle-o"></i> Profile</a></li>
+							<li><a href="pages/examples/login.html"><i
+									class="fa fa-circle-o"></i> Login</a></li>
+							<li><a href="pages/examples/register.html"><i
+									class="fa fa-circle-o"></i> Register</a></li>
+							<li><a href="pages/examples/lockscreen.html"><i
+									class="fa fa-circle-o"></i> Lockscreen</a></li>
+							<li><a href="pages/examples/404.html"><i
+									class="fa fa-circle-o"></i> 404 Error</a></li>
+							<li><a href="pages/examples/500.html"><i
+									class="fa fa-circle-o"></i> 500 Error</a></li>
+							<li><a href="pages/examples/blank.html"><i
+									class="fa fa-circle-o"></i> Blank Page</a></li>
+							<li><a href="pages/examples/pace.html"><i
+									class="fa fa-circle-o"></i> Pace Page</a></li>
+						</ul></li>
+				</ul>
+			</section>
+		</aside>
+	</th:block>
+</body>
+</html>
