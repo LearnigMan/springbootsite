@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity"
+	layout:decorator="layout">
+<head>
+<meta charset="UTF-8"/>
+<title>板校はおかず</title>
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" th:href="@{/css/responsive.css}"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}"/>
+<link rel="stylesheet" href="css/kataklimt.css" type="text/css" media="screen" th:href="@{/css/kataklimt.css}"/>
+</head>
+<body class="bg-content">
+<header>
+<div layout:fragment="content" class="col-sm-12">
+<div class="wrapper">
+<div id="content">
+<div class="container-fluid">
+<div class="row">
+<article class="span12">
+<h3>板校はおかず</h3>
+</article>
+<th:block th:replace="master/fragment/menu :: common_menu('comment')">メニューバー</th:block>
+<article class="span12">
+<h5>自由にコメント書いてね</h5>
+</article>
+<div class="clear"></div>
+<div class="row">
+<form th:action="@{/comment/create}" th:object="${commnetForm}" method="post">
+<div class="form-group col-md-2">
+<label for="nickname" class="label label-success">ニックネーム</label>
+<input type="text" class="form-control" name="nickName" th:field="*{nickName}"/>
+</div>
+<div class="form-group col-md-10">
+<label for="nickname" class="label label-success">コメント</label>
+<input type="text" class="form-control" name="comment" th:field="*{comment}"/>
+</div>
+<button type="submit" class="btn bg-purple margin">作成</button>
+</form>
+<hr/>
+</div>
+<div th:if="${comments} != null" th:each="comment : ${comments}">
+<div class="question_Box">
+<div class="col-md-1 text-center" style="width: 12.499999995%">
+<i class="glyphicon glyphicon-user fa-4x" th:classappend="${#strings.isEmpty(comment.nickName)} ? 'icon-fail' : 'icon-success' "></i><br/>
+<th:block th:if="${comment.nickName} != null">
+<label class="text-center label label-default" th:text="${comment.nickName}">ニックネーム</label>
+</th:block>
+<th:block th:if="${#strings.isEmpty(comment.nickName)}">
+<label class="text-center label label-default">名無し</label>
+</th:block>
+</div>
+<div th:text="${comment.comment}" class="arrow_question col-md-10">投稿内容</div>
+</div>
+</div>
+<script type="text/javascript" th:inline="javascript">
+/*<![CDATA[*/
+
+
+/*]]>*/
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</body>
+</html>

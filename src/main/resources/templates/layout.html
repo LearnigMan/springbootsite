@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<!-- thymeleafと拡張機能を使用するおまじない -->
 <head>
 <meta charset="UTF-8" />
 <title>Layout</title>
@@ -10,19 +9,20 @@
 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
 <link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+th:href="@{webjars/Magnific-Popup/1.0.0/magnific-popup.css}" />
+<link rel="stylesheet" type="text/css"
 href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
 th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}" />
-<link rel="stylesheet" type="text/css"
-th:href="@{/webjars/adminlte/2.3.11/dist/css/AdminLTE.min.css}" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css"
-th:href="@{/webjars/adminlte/2.3.11/dist/css/skins/skin-blue.min.css}" />
-<link rel="stylesheet" type="text/css"
-th:href="@{/webjars/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css}" />
-<link rel="stylesheet" type="text/css"
-th:href="@{/css/style.css}" />
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/lightbox.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/normalize.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/responsive.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/app.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/circle.css}" />
 </head>
 <body>
 <!-- JS -->
@@ -31,7 +31,10 @@ th:href="@{/css/style.css}" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 <script th:src="@{/webjars/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js}"></script>
-<script th:src="@{/webjars/adminlte/2.3.11/dist/js/app.min.js}"></script>
-	<div layout:fragment="content">Fake Contents</div>
+<script th:src="@{/webjars/masonry/3.1.5/masonry.pkgd.min.js}"
+	    src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js"></script>
+<script th:src="@{/webjars/Magnific-Popup/1.0.0/jquery.magnific-popup.min.js}"
+	    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<div layout:fragment="content">Fake Contents</div>
 </body>
 </html>

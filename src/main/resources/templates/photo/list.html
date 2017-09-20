@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity"
+	layout:decorator="layout">
+<head>
+<meta charset="UTF-8"/>
+<title>板校はおかず</title>
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" th:href="@{/css/responsive.css}"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}"/>
+<link rel="stylesheet" href="css/kataklimt.css" type="text/css" media="screen" th:href="@{/css/kataklimt.css}"/>
+</head>
+<body class="bg-content">
+<header>
+<div layout:fragment="content" class="col-sm-12">
+<div class="wrapper">
+<div id="content">
+<div class="container-fluid">
+<div class="row">
+<article class="span12">
+<h3>板校はおかず</h3>
+</article>
+<th:block th:replace="master/fragment/menu :: common_menu('photo')">メニューバー</th:block>
+<article class="span12">
+<h5>写真</h5>
+</article>
+<div class="clear"></div>
+<div class="grid js-masonry parent-container">
+<th:block th:each="photolist,stat : ${photolists}">
+<div class="grid-sizer col-xs-2">
+<div class="grid-item-content">
+<a th:href="@{${'img/page3-lg-img' + photolist + '.jpg'}}">
+    <img th:src="@{${'img/page3-img' + photolist + '.jpg'}}" data-original="img/page3-img1.jpg" src="img/page3-img1.jpg"/>
+</a>
+</div>
+</div>
+</th:block>
+</div>
+<script type="text/javascript" th:inline="javascript">
+/*<![CDATA[*/
+		$(function() {
+		var $container = $('.grid');
+		$container.masonry({
+			columnWidth: '.grid-sizer',
+	        itemSelector: '.grid-item'
+	    });
+		$('.parent-container').each(function () {
+			$(this).magnificPopup({
+				  delegate: 'a',
+				  type: 'image',
+				  gallery: {
+			            enabled: true
+			        }
+			 });
+		});
+	});
+/*]]>*/
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</body>
+</html>

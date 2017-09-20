@@ -1,0 +1,43 @@
+https://github.com/LearnigMan/springbootsite.git
+
+★ローカルコミットからリモートコミットまで
+git init
+git status
+git add . 
+git commit -m "try commit"
+git config remote.origin.url https://LearnigMan:tanabe167@github.com/LearnigMan/springbootsite.git
+git push -u origin master
+
+git branch mockup20170824 --★本来チケット番号とか
+git checkout
+
+
+ git config remote.origin.url
+
+git config remote.origin.url https://aws20170813@gmail@github.com/LearnigMan/springbootsite.git
+
+git pull --set-upstream https://github.com/LearnigMan/springbootsite.git
+
+git remote add origin https://github.com/LearnigMan/springbootsite.git
+git remote add origin https://github.com/<username>/first_app.git
+
+git config --global aws20170813@gmail.com
+git config --global user.email
+
+
+git config --global user.name aws20170813@gmail.com
+git config --global user.email aws20170813@gmail.com
+
+aws20170813@gmail.com
+プライバシー
+アカウント
+
+git remote add origin https://github.com/<username>/first_app.git
+
+https://aws20170813@gmail.com@github.com/
+https://aws20170813@gmail@github.com/LearnigMan/springbootsite.git
+
+
+
+★git config remote.origin.url https://LearnigMan:tanabe167@github.com/LearnigMan/springbootsite.git
+
