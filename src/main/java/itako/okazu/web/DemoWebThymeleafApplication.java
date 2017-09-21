@@ -8,7 +8,10 @@ import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 public class DemoWebThymeleafApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoWebThymeleafApplication.class, args);
-		System.out.println("プール");
-		System.out.println(new Pbkdf2PasswordEncoder().encode("プール"));
+		String password = "しばうら";
+		System.out.println(password);
+		System.out.println(":::::::::::::::");
+		System.out.println(new Pbkdf2PasswordEncoder().encode(password));
 	}
+
 }

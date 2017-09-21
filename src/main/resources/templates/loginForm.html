@@ -18,8 +18,8 @@
 					<div class="container wide">
 						<div class="row">
 							<div class="main-text">
-								<h2>問題</h2>
-								<h2 class="wow fadeInUp" th:text="${quiz.contents}">クイズの問題を表示</h2>
+								<h2>クイズに答えて進む！</h2>
+								<h2 class="fadeInUp" th:text="${quiz.contents}">クイズの問題を表示</h2>
 								<form class="form-signin" th:action="@{/login}" method="post">
 									<input type="hidden" class="form-control" name="id"	th:value="${quiz.id}" />
 									<div class="row text-center">
@@ -39,10 +39,7 @@
 		</section>
 <script type="text/javascript" th:inline="javascript">
 /*<![CDATA[*/
-var wow = new WOW({
-    mobile: false
-});
-wow.init();
+
 /*]]>*/
 </script>
 </div>
