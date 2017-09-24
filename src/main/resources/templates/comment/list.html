@@ -42,7 +42,7 @@
 <div th:if="${comments} != null" th:each="comment : ${comments}">
 <div class="question_Box">
 <div class="col-md-1 text-center" style="width: 12.499999995%">
-<i class="glyphicon glyphicon-user fa-4x" th:classappend="${#strings.isEmpty(comment.nickName)} ? 'icon-fail' : 'icon-success' "></i><br/>
+<i class="glyphicon glyphicon-user gi-3x" th:classappend="${#strings.isEmpty(comment.nickName)} ? 'icon-fail' : 'icon-success' "></i><br/>
 <th:block th:if="${comment.nickName} != null">
 <label class="text-center label label-default" th:text="${comment.nickName}">ニックネーム</label>
 </th:block>
@@ -50,13 +50,12 @@
 <label class="text-center label label-default">名無し</label>
 </th:block>
 </div>
-<div th:text="${comment.comment}" class="arrow_question col-md-10">投稿内容</div>
+<div th:text="${comment.comment}" class="arrow_question col-md-10">投稿内容
+</div>
 </div>
 </div>
 <script type="text/javascript" th:inline="javascript">
 /*<![CDATA[*/
-
-
 /*]]>*/
 </script>
 </div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity"
+	layout:decorator="layout">
+<head>
+<meta charset="UTF-8"/>
+<title>板校はおかず</title>
+<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen" th:href="@{/css/responsive.css}"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}"/>
+<link rel="stylesheet" href="css/kataklimt.css" type="text/css" media="screen" th:href="@{/css/kataklimt.css}"/>
+</head>
+<body class="bg-content">
+<header>
+<div layout:fragment="content" class="col-sm-12">
+<div class="wrapper">
+<div id="content">
+<div class="container-fluid">
+<div class="row">
+<article class="span12">
+<h3>板校はおかず</h3>
+</article>
+<th:block th:replace="master/fragment/menu :: common_menu('comment')">メニューバー</th:block>
+<div class="col-middle">
+<div class="text-center error-message">
+<hr/>
+<h5 id="env" class="title-lv2 mt0" tabindex="0">
+<span>このサイトについて</span>
+</h5>
+<div class="text-left">
+<p class="whitetext">板橋校舎サヨナラ企画にとった写真やコメントを残せるサイトです。</p>
+</div>
+<hr/>
+<h5 id="env" class="title-lv2 mt0" tabindex="0">
+<span>推奨環境について</span>
+</h5>
+<div class="text-left">
+<p class="whitetext">Google Chrome 最新バージョン</p>
+<p class="whitetext">Internet Explorer 11</p>
+</div>
+<hr/>
+<h5 id="env" class="title-lv2 mt0" tabindex="0">
+<span>TODO（あとで消す）</span>
+</h5>
+<div class="text-left">
+<p class="whitetext">サーバー：AWS、ELB（完了）</p>
+<p class="whitetext">言語：Java（Spring Boot)、ORM（Doma)、Bootstrap（完了）</p>
+<p class="whitetext">ソース管理：Git（完了）</p>
+<p class="whitetext">CI：Jenkins(予定だが、ELBならいらないかな～、連携むずかしそう)</p>
+<p class="whitetext">写真配置がおかしくなるときがある。→サイズ見直し</p>
+<p class="whitetext">クイズは、考える・・・・</p>
+<p class="whitetext">写真増やすならLazyLoad考えないと</p>
+</div>
+</div>
+</div>
+<script type="text/javascript" th:inline="javascript">
+/*<![CDATA[*/
+
+
+/*]]>*/
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</body>
+</html>

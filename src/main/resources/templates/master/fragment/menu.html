@@ -8,30 +8,13 @@
 <body>
 <th:block th:fragment="common_menu(module)">
 <div class="modal-body nav">
-       <ul>
-         <li><a href="#" th:href="@{/}">当サイトについて</a></li>
-         <li><a href="#" th:href="@{/photo}">写真</a></li>
-         <li><a href="#" th:href="@{/comment/list}">つぶやく</a></li>
-         <li><a href="#" th:href="@{/}">？？？</a></li>
-        </ul>
-</div>
-
-</th:block>
-
-
-<!--
-<th:block th:fragment="common_menu(module)">
-<nav class="navbar navbar-default">
-<div id="gnavi" class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-	<li th:classappend="${module == 'photo' ? 'active' : ''}"><a href="#" th:href="@{/photo}">写真</a></li>
-	<li th:classappend="${module == 'comment' ? 'active' : ''}"><a href="/comment/list" th:href="@{/comment/list}">落書き</a></li>
+<ul>
+<li><a href="#" th:href="@{/about}">このサイトについて</a></li>
+<li><a href="#" th:href="@{/photo}">写真（更新予定）</a></li>
+<li><a href="#" th:href="@{/comment/list}">つぶやく</a></li>
+<li><a href="#" th:href="@{/}">？？？（考え中）</a></li>
 </ul>
 </div>
-</nav>
 </th:block>
- -->
-
-
 </body>
 </html>
